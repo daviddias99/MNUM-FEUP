@@ -18,5 +18,20 @@
     <ClCompile Include="Bissection Method.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Regula-Falsi Method.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Newton%27s Method.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems Newton%27s Method.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pecard-Peano Method.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems Pecard-Peano Method.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
