@@ -9,12 +9,12 @@ using namespace std;
 
 double func1(double x, double y) {
 
-	return x * x - y - 1.2;
+	return x * x - y - 2;
 }
 
 double func2(double x, double y) {
 
-	return -x + y*y - 0.5;
+	return -x + y*y - 2;
 }
 
 double dfunc1dx(double x, double y) {
@@ -64,7 +64,7 @@ void newtonSystems(double f1(double, double), double f2(double,double), double d
 int main() {
 
 
-	newtonSystems(func1, func2, dfunc1dx, dfunc1dy, dfunc2dx, dfunc2dy, 1.1, 1.1, 6);
+	newtonSystems(func1, func2, dfunc1dx, dfunc1dy, dfunc2dx, dfunc2dy, 1.5, 0.8, 2);
 
 
 

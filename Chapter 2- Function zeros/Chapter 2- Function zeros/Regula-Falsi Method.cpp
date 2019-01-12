@@ -5,7 +5,8 @@ using namespace std;
 
 double func(double x) {
 
-	return sin(x) + pow(x, 5) - 0.2*x + 0.5;
+	//return sin(x) + pow(x, 5) - 0.2*x + 0.5;
+	return pow(x, 7) + 0.5*x - 1;
 
 }
 
@@ -30,7 +31,7 @@ void regulaFalsi(double f(double), double limA, double limB, int numIter) {
 
 int main() {
 
-	regulaFalsi(func, -1, 0, 50);
+	regulaFalsi(func, 0, 1.2, 50);
 
 
 

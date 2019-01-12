@@ -6,11 +6,15 @@ using namespace std;
 double func1(double x, double y, double z) {
 
 	return -exp(-0.5 / (z + 273))*y;
+	
+	return z;
 }
 
 double func2(double x, double y, double z) {
 
 	return 30 * exp(-0.5 / (z + 273))*y - 0.5 * (z - 20);
+	
+	//return 2 + x * x + z*x;
 }
 
 pair<double, double> RK4Integral(double f(double, double, double), double g(double, double, double), double startX, double startY, double startZ, double endX, double step) {

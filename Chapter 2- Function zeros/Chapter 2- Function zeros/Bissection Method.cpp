@@ -6,7 +6,7 @@ using namespace std;
 
 double func(double x ){
 
-	return sin(x) + pow(x, 5) - 0.2*x + 0.5;
+	return -10*sin(x) + pow(x, 3) +3.4;
 
 }
 
@@ -33,6 +33,6 @@ void bissection(double f(double), double limA, double limB, double nIter ) {
 
 int main()
 {
-	bissection(func, -1, 0, 6);
+	bissection(func, 1.5, 5.9, 6);
 }
 

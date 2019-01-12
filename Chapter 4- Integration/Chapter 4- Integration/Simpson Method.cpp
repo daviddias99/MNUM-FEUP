@@ -6,7 +6,8 @@ using namespace std;
 double func(double x) {
 
 
-	return sqrt(1 + pow(1.5*exp(1.5*x), 2));
+	//return sqrt(1 + pow(1.5*exp(1.5*x), 2));
+	return exp(1.5*x);
 }
 
 double simpsonIntegral(double f(double), double limA, double limB, double step) {
@@ -31,7 +32,7 @@ double simpsonIntegral(double f(double), double limA, double limB, double step) 
 	cout << "x: " << limB << endl;
 
 	sum *= step / 3;
-	cout << "SUM: " << sum << endl;
+	cout << setprecision(15) << "SUM: " << sum << endl;
 
 
 	return sum;
@@ -39,11 +40,11 @@ double simpsonIntegral(double f(double), double limA, double limB, double step) 
 
 int main()
 {
-	double S = simpsonIntegral(func, 0, 1, 0.25);
+	double S = simpsonIntegral(func, 2.5, 3, 0.125);
 	cout << endl;
-	double Sl = simpsonIntegral(func, 0, 1, 0.125);
+	double Sl = simpsonIntegral(func, 2.5, 3, 0.0625);
 	cout << endl;
-	double Sll = simpsonIntegral(func, 0, 1, 0.0625);
+	double Sll = simpsonIntegral(func, 2.5, 3, 0.03125);
 	cout << endl;
 
 	double QC = (Sl - S) / (Sll - Sl);
