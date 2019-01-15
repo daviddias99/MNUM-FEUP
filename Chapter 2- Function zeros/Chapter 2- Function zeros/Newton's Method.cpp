@@ -26,7 +26,7 @@ void newtonsMethod(double f(double), double df(double), double guess, int numIte
 		cout << "x: " << x << " fx: " << f(x) << " dfx " << df(x) << endl;
 
 		x = x0 - f(x0) / df(x0);
-
+		x0 = x;
 	}
 
 

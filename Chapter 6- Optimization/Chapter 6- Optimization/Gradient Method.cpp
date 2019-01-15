@@ -6,17 +6,17 @@ using namespace std;
 double func(double x, double y) {
 
 
-	return 7 * x*x - 1.1*x * y + 12 * y + y * y - 8 * x;
+	return 3 * x*x - x * y + 11 * y + y * y - 8 * x;
 }
 
 double dfuncdx(double x, double y) {
 
-	return 14 * x - 1.1*y - 8;
+	return 6 * x - y - 8;
 }
 
 double dfuncdy(double x, double y) {
 
-	return -1.1*x + 12;
+	return -x + 11 +2*y;
 }
 
 void gradient(double f(double, double), double dfdx(double, double), double dfdy(double, double), double startX, double startY, double startLambda, int numIter) {
@@ -52,7 +52,7 @@ void gradient(double f(double, double), double dfdx(double, double), double dfdy
 
 int main() {
 
-	gradient(func, dfuncdx, dfuncdy, 3, 1, 0.1, 1);
+	gradient(func, dfuncdx, dfuncdy, 2, 2, 0.5, 1);
 
 
 }

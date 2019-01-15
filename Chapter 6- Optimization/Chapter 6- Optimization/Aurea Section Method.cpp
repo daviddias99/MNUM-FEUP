@@ -15,12 +15,12 @@ void aureaSection(double f(double), double limA, double limB, int numIter) {
 	double B = (sqrt(5) - 1) / 2;
 	double A = B * B;
 
-
+	x3 = x1 + A * (x2 - x1);
+	x4 = x1 + B * (x2 - x1);
 
 	for (int i = 0; i <= numIter; i++) {
 
-		x3 = x1 + A * (x2 - x1);
-		x4 = x1 + B * (x2 - x1);
+		
 
 		cout << i << " x1: " << x1 << " x2: " << x2 << " x3: " << x3 << " x4: " << x4 << " fx1: " << f(x1) << " fx2: " << f(x2) << " fx3: " << f(x3) << " fx4: " << f(x4) << endl;
 
@@ -28,11 +28,13 @@ void aureaSection(double f(double), double limA, double limB, int numIter) {
 
 			x2 = x4;
 			x4 = x3;
+			x3 = x1 + A * (x2 - x1);
 		}
 		else {
 
 			x1 = x3;
 			x3 = x4;
+			x4 = x1 + B * (x2 - x1);
 		}
 
 
